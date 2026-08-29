@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayashree Kathiresan | Full-stack Developer &amp; UI/UX Designer</title>
+    <meta name="description"
+        content="Portfolio of Jayashree Kathiresan, a Computer Science &amp; Engineering student specialising in full-stack development, AI-assisted tools and UI/UX design in Figma.">
+    <meta name="author" content="Jayashree Kathiresan">
+    <meta name="theme-color" content="#050510">
+    <meta property="og:title" content="Jayashree Kathiresan | Full-stack Developer &amp; UI/UX Designer">
+    <meta property="og:description" content="I don't just design screens. I build the products behind them.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238b5cf6'/%3E%3Ctext x='32' y='43' font-family='Verdana,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%23fff'%3EJK%3C/text%3E%3C/svg%3E">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Smooth Scroll (optional — the page degrades to native smooth scrolling offline) -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
+
+    <!-- Background Decor -->
+    <div class="bg-glow"></div>
+    <div class="bg-grid"></div>
+
+    <a class="skip-link" href="#projects">Skip to projects</a>
+
+    <!-- ============ Icon sprite (inline, no CDN) ============ -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <defs>
+            <g id="i-menu">
+                <path d="M4 6h16M4 12h16M4 18h16" />
+            </g>
+            <g id="i-close">
+                <path d="M18 6 6 18M6 6l12 12" />
+            </g>
+            <g id="i-layout">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M3 9h18M9 21V9" />
+            </g>
+            <g id="i-figma">
+                <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
+                <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
+                <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" />
+                <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" />
+                <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
+            </g>
+            <g id="i-code">
+                <path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16" />
+            </g>
+            <g id="i-terminal">
+                <path d="m4 17 6-6-6-6M12 19h8" />
+            </g>
+            <g id="i-database">
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0" />
+            </g>
+            <g id="i-layers">
+                <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+                <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65M22 12.65l-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" />
+            </g>
+            <g id="i-cap">
+                <path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z" />
+                <path d="M22 10v6M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+            </g>
+            <g id="i-zap">
+                <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+            </g>
+            <g id="i-bag">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <path d="M3 6h18M16 10a4 4 0 0 1-8 0" />
+            </g>
+            <g id="i-mic">
+                <rect x="9" y="2" width="6" height="11" rx="3" />
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3" />
+            </g>
+            <g id="i-file">
+                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" />
+                <path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8" />
+            </g>
+            <g id="i-wallet">
+                <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" />
+                <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" />
+            </g>
+            <g id="i-award">
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11" />
+            </g>
+            <g id="i-globe">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20" />
+            </g>
+            <g id="i-phone-dev">
+                <rect x="5" y="2" width="14" height="20" rx="2" />
+                <path d="M12 18h.01" />
+            </g>
+            <g id="i-mail">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </g>
+            <g id="i-phone">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </g>
+            <g id="i-pin">
+                <path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0" />
+                <circle cx="12" cy="10" r="3" />
+            </g>
+            <g id="i-github">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                <path d="M9 18c-4.51 2-5-2-7-2" />
+            </g>
+            <g id="i-linkedin">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+            </g>
+            <g id="i-download">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+            </g>
+            <g id="i-zoom">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3M11 8v6M8 11h6" />
+            </g>
+        </defs>
+    </svg>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">JK</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#design">Design</a>
+                <a href="#contact">Contact</a>
+                <a href="mailto:kathiresanjayashree@gmail.com" class="nav-cta">Let's Talk</a>
+            </div>
+            <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false"
+                aria-controls="navLinks">
+                <svg class="ico" viewBox="0 0 24 24"><use href="#i-menu" /></svg>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ==================== Hero ==================== -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="badge">Available for Internships</span>
+                    <h1 class="gradient-text">Jayashree Kathiresan</h1>
+                    <h2><span id="typing-text">Full-stack Developer</span><span class="caret" aria-hidden="true"></span></h2>
+                    <p class="hero-quote">"I don't just design screens. I build the <span>products behind them.</span>"</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
+                        <a href="Jayashree_Resume.docx" download class="btn btn-outline">
+                            <svg class="ico" viewBox="0 0 24 24"><use href="#i-download" /></svg>
+                            Résumé
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="profile-card">
+                        <img src="pic.png" alt="Jayashree Kathiresan" class="profile-img" width="1086"
+                            height="1448" decoding="async" fetchpriority="high">
+                    </div>
+                    <div class="profile-accent"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== Stats Matrix ==================== -->
+        <section class="container stats-matrix">
+            <div class="stat-item">
+                <div class="stat-header">
+                    <svg class="ico" viewBox="0 0 24 24"><use href="#i-layout" /></svg>
+                    <span>Frontend Development</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="--w:85%"></div></div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <svg class="ico" viewBox="0 0 24 24"><use href="#i-figma" /></svg>
+                    <span>UI/UX Design</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="--w:80%"></div></div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-header">
+                    <svg class="ico" viewBox="0 0 24 24"><use href="#i-terminal" /></svg>
+                    <span>AI-Assisted Tooling</span>
+                </div>
+                <div class="progress-bar"><div class="progress" style="--w:70%"></div></div>
+            </div>
+        </section>
+
+        <!-- ==================== About ==================== -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">01. Who I am</span>
+                    <h2 class="section-title">Bridging Design and Development</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Second-year B.E. student in <strong>Computer Science &amp; Engineering</strong> at Chettinad
+                            College of Engineering and Technology, based in Trichy, Tamil Nadu.</p>
+                        <p>I'm project-first. Instead of waiting for a syllabus to hand me experience, I pick a real
+                            problem — a bakery with no online presence, a study routine nobody keeps, a resume that never
+                            clears ATS — and I build the thing that fixes it. Requirements, user flows and
+                            screen-by-screen wireframes get documented before a single line is written, then the same
+                            file goes all the way to a responsive, working build.</p>
+
+                        <div class="positioning-tags">
+                            <span class="tag-box">Frontend Developer</span>
+                            <span class="tag-box">UI/UX Designer</span>
+                            <span class="tag-box">Figma Prototyper</span>
+                            <span class="tag-box">AI Tools Builder</span>
+                            <span class="tag-box">Full-stack Dev</span>
+                        </div>
+
+                        <div class="edu-card">
+                            <svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-cap" /></svg>
+                            <div>
+                                <h4>Chettinad College of Engineering and Technology</h4>
+                                <p>B.E. Computer Science &amp; Engineering (2024 &ndash; 2028)</p>
+                                <span class="score">CGPA: 7.816</span>
+                            </div>
+                        </div>
+
+                        <ul class="edu-list">
+                            <li>
+                                <span>Higher Secondary Certificate (HSC)</span>
+                                <em>Amala Girls Hr. Sec. School &middot; 2023&ndash;2024</em>
+                                <b>78.83%</b>
+                            </li>
+                            <li>
+                                <span>Secondary School Leaving Certificate (SSLC)</span>
+                                <em>Amala Girls Hr. Sec. School &middot; 2021&ndash;2022</em>
+                                <b>84.80%</b>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-zap" /></svg>
+                            <h3>Solo Shipper</h3>
+                            <p>Four products delivered end-to-end from scratch with no team dependency — wireframe,
+                                design, build, ship.</p>
+                        </div>
+                        <div class="highlight-item">
+                            <svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-layers" /></svg>
+                            <h3>Design-First Engineer</h3>
+                            <p>Component libraries, auto-layout and prototyping flows in Figma, then the same screens
+                                written line by line in code.</p>
+                        </div>
+                        <div class="highlight-item">
+                            <svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-globe" /></svg>
+                            <h3>Multilingual</h3>
+                            <p>Tamil (native), English (professional), Hindi and Japanese (basic) — comfortable
+                                communicating across teams.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== Skills ==================== -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">02. Expertise</span>
+                    <h2 class="section-title">Technical Ecosystem</h2>
+                </div>
+                <div class="skills-bento">
+                    <div class="skill-card main-skill">
+                        <svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-layout" /></svg>
+                        <h3>Frontend Development</h3>
+                        <ul>
+                            <li><strong>Core:</strong> HTML5, CSS3, JavaScript &mdash; hand-written, no page builders</li>
+                            <li><strong>Frameworks:</strong> React.js, Bootstrap</li>
+                            <li><strong>Craft:</strong> Fully responsive layouts, accessible markup, cross-device testing</li>
+                            <li><span class="soon">Learning:</span> Node.js, Spring Boot</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card secondary-skill">
+                        <svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-figma" /></svg>
+                        <h3>UI/UX Design</h3>
+                        <ul>
+                            <li>Figma component libraries</li>
+                            <li>Auto-layout &amp; design systems</li>
+                            <li>Interactive prototyping flows</li>
+                            <li>User flows &amp; wireframing</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card secondary-skill">
+                        <svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-code" /></svg>
+                        <h3>Programming</h3>
+                        <ul>
+                            <li>C &amp; Java fundamentals</li>
+                            <li>Python for scripting &amp; AI tools</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>MongoDB document modelling</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card tertiary-skill">
+                        <svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-terminal" /></svg>
+                        <h3>Tools &amp; Platforms</h3>
+                        <p>Git, GitHub, VS Code, Figma, Canva, Microsoft Power BI, MS Excel / Word / PowerPoint and
+                            AI-assisted development tools.</p>
+                    </div>
+
+                    <div class="skill-card tertiary-skill">
+                        <svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-database" /></svg>
+                        <h3>Backend &amp; Data</h3>
+                        <p><strong>Python</strong>, MongoDB, REST fundamentals. Currently working through Node.js and
+                            Spring Boot.</p>
+                    </div>
+
+                    <div class="skill-card tertiary-skill">
+                        <svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-layers" /></svg>
+                        <h3>APIs &amp; Integrations</h3>
+                        <p>Google Maps API, voice interaction pipelines, ATS resume parsing. Adobe Photoshop and Adobe XD
+                            are next on the list.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== Projects ==================== -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">03. Showcase</span>
+                    <h2 class="section-title">Things I've Built</h2>
+                </div>
+                <div class="projects-grid">
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <svg class="ico" viewBox="0 0 24 24"><use href="#i-bag" /></svg>
+                                <span>Live Client Build / Local Business</span>
+                            </div>
+                            <h3>Bakery Shop Website</h3>
+                            <p>A fully responsive storefront built from scratch for a neighbourhood bakery that had never
+                                existed online. Hand-written HTML5, CSS3 and JavaScript — no templates.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                                <span>Google Maps API</span><span>Responsive</span>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Took a business with zero prior online presence to a working storefront.</li>
+                                <li>Integrated the Google Maps API for customer navigation and store discoverability.</li>
+                                <li>Mobile-first layout tested across phone, tablet and desktop breakpoints.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <svg class="ico" viewBox="0 0 24 24"><use href="#i-mic" /></svg>
+                                <span>Flagship Project / AI Voice System</span>
+                            </div>
+                            <h3>AI Voice Learning Agent</h3>
+                            <p>A voice-driven learning companion that holds a spoken conversation, generates a
+                                personalised roadmap for whatever the learner is trying to master, then tracks progress
+                                over time.</p>
+                            <div class="project-tech">
+                                <span>Voice Interaction</span><span>Roadmap Generation</span>
+                                <span>Daily Tracking</span><span>Progress Monitoring</span>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Hands-free voice interaction for study sessions.</li>
+                                <li>Personalised learning roadmaps generated per topic and goal.</li>
+                                <li>Daily study tracking with progress reporting back to the learner.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <svg class="ico" viewBox="0 0 24 24"><use href="#i-file" /></svg>
+                                <span>Applied AI / Career Tooling</span>
+                            </div>
+                            <h3>AI Resume Analyzer</h3>
+                            <p>Scores a resume against ATS criteria, then does the part most tools skip — it returns a
+                                plan for closing the gaps it found.</p>
+                            <div class="project-tech">
+                                <span>ATS Scoring</span><span>Skill Gap Analysis</span>
+                                <span>Learning Roadmap</span><span>Interview Prep</span>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Evaluates resumes against ATS parsing and keyword criteria.</li>
+                                <li>Generates job-specific skill recommendations for the target role.</li>
+                                <li>Produces a learning roadmap and interview preparation content.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <div class="project-meta">
+                                <svg class="ico" viewBox="0 0 24 24"><use href="#i-wallet" /></svg>
+                                <span>Design-to-Code / Personal Finance</span>
+                            </div>
+                            <h3>Expense Tracker</h3>
+                            <p>Income and expense logging with category tagging and spending summary views. Designed in
+                                Figma first — component library, auto-layout, full prototype — then built screen for
+                                screen.</p>
+                            <div class="project-tech">
+                                <span>Figma &rarr; Code</span><span>Categorisation</span>
+                                <span>Summary Views</span><span>Income / Expense</span>
+                            </div>
+                            <ul class="project-bullets">
+                                <li>Complete Figma design system delivered before implementation began.</li>
+                                <li>Category tagging with spending summaries across time periods.</li>
+                                <li>Clean separation between logging, categorisation and reporting views.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== Design Practice ==================== -->
+        <section class="design section" id="design">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">04. Design Practice</span>
+                    <h2 class="section-title">Figma Case Studies</h2>
+                </div>
+                <div class="design-grid">
+                    <div class="design-card">
+                        <div class="design-icon"><svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-pin" /></svg></div>
+                        <span class="design-domain">Travel</span>
+                        <h4>Travel Booking Interface</h4>
+                        <p>Search, itinerary and checkout flow prototyped end to end with a reusable component library.</p>
+                    </div>
+                    <div class="design-card">
+                        <div class="design-icon"><svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-award" /></svg></div>
+                        <span class="design-domain">Healthcare</span>
+                        <h4>Hospital Appointment App</h4>
+                        <p>Doctor discovery, slot booking and confirmation states, mapped as a complete user flow first.</p>
+                    </div>
+                    <div class="design-card">
+                        <div class="design-icon"><svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-phone-dev" /></svg></div>
+                        <span class="design-domain">Messaging</span>
+                        <h4>WhatsApp UI Redesign</h4>
+                        <p>A rethink of hierarchy, density and navigation inside an app everyone already knows by heart.</p>
+                    </div>
+                    <div class="design-card">
+                        <div class="design-icon"><svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-bag" /></svg></div>
+                        <span class="design-domain">Food Delivery</span>
+                        <h4>Zomato-Inspired Ordering App</h4>
+                        <p>Restaurant browsing through to checkout, built on auto-layout with full prototyping flows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== Certifications ==================== -->
+        <section class="certs section" id="certs">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">05. Recognition</span>
+                    <h2 class="section-title">Certifications &amp; Achievements</h2>
+                </div>
+                <div class="certs-list">
+                    <div class="cert-item cert-featured">
+                        <button class="cert-thumb" type="button" data-cert="Certificate%201.jpeg"
+                            aria-label="View the SNR Automations certificate full size">
+                            <img src="Certificate%201.jpeg"
+                                alt="Certificate of completion — 30 days of Python and AI Tools, SNR Automations, awarded to Jayashree K"
+                                loading="lazy" decoding="async">
+                            <span class="cert-zoom">
+                                <svg class="ico" viewBox="0 0 24 24"><use href="#i-zoom" /></svg>
+                                View certificate
+                            </span>
+                        </button>
+                        <div class="cert-body">
+                            <span class="cert-domain">Python &amp; AI</span>
+                            <h4>Python &amp; AI Tools Certification</h4>
+                            <p>SNR Automations &middot; 30-day course, Mar &ndash; Apr 2026</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-stack">
+                        <div class="cert-item">
+                            <span class="cert-domain">Data Science</span>
+                            <h4>Python for Data Science</h4>
+                            <p>Infosys Springboard</p>
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-domain">Research</span>
+                            <h4>Technical Paper Presentation</h4>
+                            <p>V.S.B. College of Engineering and Technical Campus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== Matrix & Languages ==================== -->
+        <section class="matrix section">
+            <div class="container matrix-container">
+                <div class="matrix-content">
+                    <div class="section-header">
+                        <span class="section-tag">06. Assessment</span>
+                        <h2 class="section-title">Skill Depth Matrix</h2>
+                    </div>
+                    <div class="depth-matrix">
+                        <div class="matrix-row">
+                            <span>HTML5 / CSS3 <b>90%</b></span>
+                            <div class="bar"><div class="fill" style="--w:90%"></div></div>
+                        </div>
+                        <div class="matrix-row">
+                            <span>JavaScript <b>80%</b></span>
+                            <div class="bar"><div class="fill" style="--w:80%"></div></div>
+                        </div>
+                        <div class="matrix-row">
+                            <span>Figma / UI Design <b>85%</b></span>
+                            <div class="bar"><div class="fill" style="--w:85%"></div></div>
+                        </div>
+                        <div class="matrix-row">
+                            <span>React.js <b>70%</b></span>
+                            <div class="bar"><div class="fill" style="--w:70%"></div></div>
+                        </div>
+                        <div class="matrix-row">
+                            <span>Python <b>75%</b></span>
+                            <div class="bar"><div class="fill" style="--w:75%"></div></div>
+                        </div>
+                    </div>
+                    <p class="matrix-note">Self-assessed, based on shipped project work.</p>
+                </div>
+
+                <div class="lang-content">
+                    <div class="section-header">
+                        <span class="section-tag">Communication</span>
+                        <h2 class="section-title">Languages</h2>
+                    </div>
+                    <div class="lang-list">
+                        <div class="lang-item"><strong>Tamil</strong> &mdash; Native</div>
+                        <div class="lang-item"><strong>English</strong> &mdash; Professional</div>
+                        <div class="lang-item"><strong>Hindi</strong> &mdash; Basic</div>
+                        <div class="lang-item"><strong>Japanese</strong> &mdash; Basic</div>
+                    </div>
+
+                    <div class="soft-skills">
+                        <h3>Working Style</h3>
+                        <div class="soft-list">
+                            <span>Quick learner</span><span>Problem solving</span><span>Teamwork</span>
+                            <span>Time management</span><span>Adaptability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== Contact ==================== -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="glass-compact">
+                    <div class="contact-header">
+                        <h2>Let's Build Something Together</h2>
+                        <p>Currently seeking Software Developer Internships in frontend, full-stack and UI/UX roles.</p>
+                    </div>
+
+                    <div class="contact-methods">
+                        <a href="mailto:kathiresanjayashree@gmail.com" class="contact-btn">
+                            <svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-mail" /></svg>
+                            <span>kathiresanjayashree@gmail.com</span>
+                        </a>
+                        <a href="tel:+916379038106" class="contact-btn">
+                            <svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-phone" /></svg>
+                            <span>+91 63790 38106</span>
+                        </a>
+                        <div class="contact-btn">
+                            <svg class="ico ico-lg" viewBox="0 0 24 24"><use href="#i-pin" /></svg>
+                            <span>Trichy, Tamil Nadu</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-social-grid">
+                        <h3>Find Me Online</h3>
+                        <div class="social-links-compact">
+                            <a href="https://github.com/jayashree00602" target="_blank" rel="noopener"
+                                class="social-item" title="GitHub" aria-label="GitHub">
+                                <svg class="ico ico-xl" viewBox="0 0 24 24"><use href="#i-github" /></svg>
+                            </a>
+                            <a href="https://linkedin.com/in/jayashree-kathiresan" target="_blank" rel="noopener"
+                                class="social-item" title="LinkedIn" aria-label="LinkedIn">
+                                <svg class="ico ico-xl" viewBox="0 0 24 24"><use href="#i-linkedin" /></svg>
+                            </a>
+                            <a href="Jayashree_Resume.docx" download class="social-item" title="Download Résumé"
+                                aria-label="Download résumé">
+                                <svg class="ico ico-xl" viewBox="0 0 24 24"><use href="#i-download" /></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; <span id="year">2026</span> Jayashree Kathiresan. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/jayashree00602" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg class="ico" viewBox="0 0 24 24"><use href="#i-github" /></svg>
+                </a>
+                <a href="https://linkedin.com/in/jayashree-kathiresan" target="_blank" rel="noopener"
+                    aria-label="LinkedIn">
+                    <svg class="ico" viewBox="0 0 24 24"><use href="#i-linkedin" /></svg>
+                </a>
+                <a href="mailto:kathiresanjayashree@gmail.com" aria-label="Email">
+                    <svg class="ico" viewBox="0 0 24 24"><use href="#i-mail" /></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Certificate lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate preview" hidden>
+        <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close preview">
+            <svg class="ico" viewBox="0 0 24 24"><use href="#i-close" /></svg>
+        </button>
+        <figure class="lightbox-figure">
+            <img id="lightboxImg" src="" alt="">
+            <figcaption>Click anywhere or press Esc to close</figcaption>
+        </figure>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
